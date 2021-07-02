@@ -20,10 +20,12 @@ refs.input.addEventListener('input', debounce(searchCountry, 1000));
 
 function searchCountry(e) {
     const countryToFind = refs.input.value;
-    return fetchCountries(countryToFind)
+    if (countryToFind) {
+        return fetchCountries(countryToFind)
         .then((response) => {
             return createMarkup(response);
         });
+    }
 }
 
 
