@@ -28,7 +28,7 @@ function searchCountry(e) {
 
 
 function createMarkup(countries) {
-    refs.countryList.innerHTML = '';
+    clearMarkup();
     if (countries.length > 10) {
         return alert('to many countries')
     };
@@ -38,12 +38,19 @@ function createMarkup(countries) {
     if (countries.length === 1) {
         return createDetailCard(...countries);
     }
+    return  showNotification('country not found', 'error') 
+}
+
+function showNotification(text, type) {
     return alert({
-        text: 'country not found',
-        type: 'error',
+         text,
+        type,
         delay: 3000
-    });
-    
+    })
+}
+
+function clearMarkup() {
+    refs.countryList.innerHTML = '';
 }
 
 function createCountriesList(countries) {
