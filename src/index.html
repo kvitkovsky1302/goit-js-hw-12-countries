@@ -12,9 +12,22 @@
     />
   </head>
   <body>
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <input class="input" type="text" />
       <ul class="country-list"></ul>
+    </div> -->
+
+    <div class="container">
+      <div class="autocomplete">
+        <input
+          autocomplete="off"
+          class="autocomplete-input"
+          placeholder="Type query"
+          aria-label="Search"
+        />
+        <ul class="result-list autocomplete-result-list hidden list"></ul>
+      </div>
+      <div class="country-card"></div>
     </div>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>

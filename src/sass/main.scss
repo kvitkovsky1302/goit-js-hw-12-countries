@@ -1,7 +1,144 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-style: normal;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  background: url('../images/demo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.autocomplete {
+  color: #fff;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+}
+
+.autocomplete-input {
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 250px;
+    height: 40px;
+}
+
+.result-list {
+    padding-left: 30px;
+}
+
+.result-list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.autocomplete-result-list.hidden {
+  position: absolute;
+  z-index: 1;
+
+  box-sizing: border-box;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.country-card.visible {
+  padding: 30px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(5px);
+}
+
+.country-card-title {
+  margin-bottom: 30px;
+}
+
+.country-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.country-card-title {
+  text-align: center;
+}
+
+.country-card-list {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 50%;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.country-card-list-item {
+  justify-content: space-between;
+  display: flex;
+}
+
+.country-card-list-title {
+  margin-bottom: 15px;
+}
+
+
+.container {
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    padding-right: 115px;
+    padding-left: 115px;
+  }
+}
